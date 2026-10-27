@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orseh - 이야기와 게임으로 만나는 성경</title>
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts (손글씨 감성 & 깔끔한 고딕) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Pretendard:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        brand: ['Gowun Batang', 'serif'],
+                        sans: ['Pretendard', 'sans-serif'],
+                    },
+                    colors: {
+                        brandBg: '#FAF8F5',
+                        brandCard: '#FFFFFF',
+                        brandPrimary: '#2C3E50',
+                        brandAccent: '#D4AF37',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-brandBg text-brandPrimary font-sans min-h-screen flex flex-col justify-between selection:bg-brandAccent/30">
+
+    <!-- HEADER SECTION -->
+    <header class="w-full border-b border-stone-200 bg-white/80 backdrop-blur-md sticky top-0 z-50">
+        <div class="max-w-4xl mx-auto px-6 py-4 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <!-- Orseh 로고 (손글씨 감성 브랜드 폰트) -->
+                <span class="font-brand text-3xl font-bold tracking-tight text-stone-800">Orseh</span>
+                <span class="text-xs bg-stone-100 text-stone-500 px-2 py-0.5 rounded-full font-medium border border-stone-200">Arcade Lab</span>
+            </div>
+            <nav class="text-sm font-medium text-stone-600 flex space-x-4">
+                <a href="#featured" class="hover:text-stone-900 transition">메인 게임</a>
+                <a href="#arcade" class="hover:text-stone-900 transition">아케이드</a>
+                <a href="#feedback" class="hover:text-stone-900 transition">소통하기</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT CONTAINER -->
+    <main class="max-w-4xl mx-auto px-6 py-10 flex-grow w-full space-y-16">
+
+        <!-- 1. HERO / FEATURED GAME SECTION -->
+        <section id="featured" class="space-y-4">
+            <div class="flex items-center justify-between">
+                <h2 class="font-brand text-xl font-bold text-stone-800 flex items-center gap-2">
+                    <span>✨</span> Featured Content
+                </h2>
+                <span class="text-xs text-amber-600 font-semibold bg-amber-50 px-2.5 py-1 rounded-full border border-amber-200/60">출시 준비 중</span>
+            </div>
+
+            <!-- 메인 게임 플레이스홀더 (웹게임 구동 영역) -->
+            <div class="bg-white rounded-2xl p-8 border border-stone-200/80 shadow-sm relative overflow-hidden group">
+                <div class="absolute inset-0 bg-gradient-to-br from-amber-500/5 to-transparent pointer-events-none"></div>
+                
+                <div class="max-w-lg space-y-4 relative z-10">
+                    <span class="text-xs font-semibold tracking-wider text-amber-700 uppercase bg-amber-100/60 px-2 py-1 rounded">Interactive Story 01</span>
+                    <h1 class="text-2xl sm:text-3xl font-bold text-stone-900 leading-snug">
+                        성경 속 생동감 넘치는 첫 번째 이야기가 찾아옵니다
+                    </h1>
+                    <p class="text-stone-600 text-sm leading-relaxed">
+                        공부나 부담 없이, 클릭 몇 번으로 성경의 깊은 인프라와 진리를 체험하는 가벼운 웹 스토리 미니게임입니다. 
+                    </p>
+                    
+                    <div class="pt-2 flex flex-wrap items-center gap-3">
+                        <button onclick="alert('첫 번째 웹게임 오픈을 열심히 준비하고 있습니다! 아래 피드백 폼을 통해 기대하는 점을 남겨주세요.')" class="bg-stone-900 hover:bg-stone-800 text-white text-sm font-medium px-5 py-2.5 rounded-xl transition shadow-sm flex items-center gap-2">
+                            <span>🎮</span> 사전 알림 받아보기
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. GAME ARCADE SECTION (미래 확장용 2x2 카드 그리드) -->
+        <section id="arcade" class="space-y-6">
+            <div class="border-b border-stone-200 pb-3 flex items-center justify-between">
+                <h2 class="font-brand text-xl font-bold text-stone-800 flex items-center gap-2">
+                    <span>🎯</span> Orseh 미니 아케이드
+                </h2>
+                <span class="text-xs text-stone-400">다양한 미니 프로젝트가 이곳에 계속 추가됩니다</span>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <!-- 카드 1 (준비 중) -->
+                <div class="bg-white rounded-xl p-5 border border-stone-200 hover:border-stone-300 transition shadow-xs flex flex-col justify-between space-y-3">
+                    <div class="space-y-1.5">
+                        <div class="flex justify-between items-start">
+                            <span class="text-lg">📖</span>
+                            <span class="text-[10px] text-stone-400 bg-stone-100 px-2 py-0.5 rounded">Coming Soon</span>
+                        </div>
+                        <h3 class="font-bold text-stone-800 text-base">선택지형 성경 스토리</h3>
+                        <p class="text-stone-500 text-xs leading-relaxed">위기의 순간, 당신의 선택은? 결정을 통해 풀어가는 에피소드 어드벤처.</p>
+                    </div>
+                </div>
+
+                <!-- 카드 2 (준비 중) -->
+                <div class="bg-white rounded-xl p-5 border border-stone-200 hover:border-stone-300 transition shadow-xs flex flex-col justify-between space-y-3">
+                    <div class="space-y-1.5">
+                        <div class="flex justify-between items-start">
+                            <span class="text-lg">💡</span>
+                            <span class="text-[10px] text-stone-400 bg-stone-100 px-2 py-0.5 rounded">Coming Soon</span>
+                        </div>
+                        <h3 class="font-bold text-stone-800 text-base">3초 성경 원어 퀴즈</h3>
+                        <p class="text-stone-500 text-xs leading-relaxed">헬라어·히브리어 단어 뒤에 숨겨진 깊은 진짜 의미를 맞추는 스피드 카드.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. FEEDBACK & CONTACT SECTION (피드백 수집) -->
+        <section id="feedback" class="bg-white rounded-2xl p-6 sm:p-8 border border-stone-200/80 shadow-sm space-y-4">
+            <div class="space-y-1">
+                <h2 class="font-brand text-xl font-bold text-stone-800">💌 Orseh에게 한 줄 남기기</h2>
+                <p class="text-stone-500 text-xs">만들어졌으면 하는 게임 아이디어나, 응원의 메시지를 자유롭게 남겨주세요!</p>
+            </div>
+
+            <!-- 이메일 전송 폼 (mailto 연동 방식) -->
+            <form action="mailto:orseh.official@gmail.com" method="post" enctype="text/plain" class="space-y-3 pt-2">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <input type="text" name="Sender_Name" placeholder="닉네임 또는 이름" required class="w-full text-sm px-3.5 py-2.5 rounded-xl border border-stone-200 focus:outline-none focus:border-stone-400 bg-stone-50/50">
+                    <input type="email" name="Sender_Email" placeholder="답변받을 이메일 (선택)" class="w-full text-sm px-3.5 py-2.5 rounded-xl border border-stone-200 focus:outline-none focus:border-stone-400 bg-stone-50/50">
+                </div>
+                <textarea name="Message" rows="3" placeholder="어떤 이야기나 게임을 기대하시나요? 의견을 남겨주세요." required class="w-full text-sm px-3.5 py-2.5 rounded-xl border border-stone-200 focus:outline-none focus:border-stone-400 bg-stone-50/50 resize-none"></textarea>
+                <button type="submit" class="w-full sm:w-auto bg-stone-800 hover:bg-stone-900 text-white text-xs font-medium px-6 py-2.5 rounded-xl transition">
+                    메시지 보내기
+                </button>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- FOOTER SECTION -->
+    <footer class="w-full border-t border-stone-200 bg-white py-6 mt-12 text-center text-xs text-stone-400 space-y-1">
+        <p class="font-brand font-bold text-stone-600">Orseh Studio</p>
+        <p>광고와 현질 유도 없이, 순수한 재미와 복음의 가치를 전합니다.</p>
+        <p class="pt-2 text-[10px]">Official Email: <a href="mailto:orseh.official@gmail.com" class="underline hover:text-stone-600">orseh.official@gmail.com</a></p>
+        <p class="text-[10px]">&copy; 2026 Orseh. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
